@@ -3,7 +3,7 @@
 <div>
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
                 <center>
-            <a href="{{route('home')}}" class="font-semibold font-serif capitalize text-indigo-600"><h3>       Masayel</h3></a>
+            <a href="{{route('home')}}" class="font-semibold font-serif capitalize text-indigo-600"><h3>       Hranews</h3></a>
         </center>
 
 

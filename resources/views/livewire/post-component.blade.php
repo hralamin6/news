@@ -1,5 +1,5 @@
 @section('title', $post->question)
-{{--@section('description', $cv->about)--}}
+@section('description', $post->answer)
 @section('url', config('app.url').'/post/'.$post->id)
 <div
     x-data="{add: false}" x-init="

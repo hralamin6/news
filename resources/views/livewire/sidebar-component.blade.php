@@ -23,7 +23,7 @@ Swal.fire({
 ">
     <a href="{{route('home')}}" class="h-14 border-b dark:border-gray-600 flex px-4 py-2 gap-3">
         <img class="object-cover rounded-full" src="{{ url(asset('unnamed.jpg')) }}" alt="" aria-hidden="true"/>
-        <span class="my-auto text-xl text-gray-500 font-mono dark:text-gray-300">       Masayel</span>
+        <span class="my-auto text-xl text-gray-500 font-mono dark:text-gray-300">       Hranews</span>
     </a>
 
     <div class="m-2 mt-4 flex">
