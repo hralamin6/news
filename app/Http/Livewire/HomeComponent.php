@@ -34,8 +34,8 @@ class HomeComponent extends Component
     public function saveData()
     {
             $data =  $this->validate([
-                'question' => ['required', 'min:2', 'max:555', Rule::unique('posts', 'question')],
-                'answer' => ['required', 'min:2', 'max:5555'],
+                'question' => ['required', 'min:2', 'max:5555', Rule::unique('posts', 'question')],
+                'answer' => ['required', 'min:2', 'max:55555'],
                 'category_id' => ['required'],
                 'image' => ['required', 'url'],
             ]);

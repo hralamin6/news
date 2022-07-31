@@ -1,5 +1,6 @@
 @section('title', $post->question)
 @section('description', $post->answer)
+@section('image', $post->image)
 @section('url', config('app.url').'/post/'.$post->id)
 <div
     x-data="{add: false}" x-init="
@@ -62,7 +63,9 @@ Swal.fire({
 
                 </div>
                 <div class="w-full mt-4">
-                    <textarea wire:model.lazy="answer" placeholder="Enter Answer" class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
+                    <textarea type="textarea" wire:model.lazy="answer" placeholder="Enter Answer" class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40">
+
+                    </textarea>
                     @error('answer')<p class="text-sm text-red-600">{{ $message }}</p>@enderror
                 </div>
                 <div class="flex justify-center gap-12">
@@ -95,7 +98,8 @@ Swal.fire({
         <div class="mt-2">
             <a href="{{route('post', $post)}}" class="text-lg lg:text-xl font-bold text-gray-700 dark:text-white hover:text-green-600 dark:hover:text-blue-300 hover:underline">
                 {{$post->question}}</a>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">{!! $post->answer !!}</p>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">{{ $post->answer }}</p>
+{{--            <p class="mt-2 text-gray-600 dark:text-gray-300">{!! $post->answer !!}</p>--}}
         </div>
     </div>
     <div class="flex justify-center gap-5 m-3">
